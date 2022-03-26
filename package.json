@@ -1,0 +1,44 @@
+{
+  "name": "@themost/ejs",
+  "version": "1.0.0",
+  "description": "EJS view engine extension for supporting layouts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "jest",
+    "build": "babel src --out-dir dist --copy-files --source-maps"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/themost-framework/ejs.git"
+  },
+  "keywords": [
+    "ejs",
+    "view",
+    "engine",
+    "express",
+    "html",
+    "render"
+  ],
+  "author": "",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/themost-framework/ejs/issues"
+  },
+  "homepage": "https://github.com/themost-framework/ejs#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.8",
+    "@babel/eslint-parser": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@types/jest": "^27.4.1",
+    "@types/supertest": "^2.0.12",
+    "eslint": "^8.11.0",
+    "express": "^4.17.3",
+    "jest": "^27.5.1",
+    "supertest": "^6.2.2"
+  },
+  "dependencies": {
+    "ejs": "^3.1.6"
+  }
+}
