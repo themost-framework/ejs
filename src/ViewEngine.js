@@ -1,19 +1,14 @@
 import ejs from 'ejs';
 import path from 'path';
-/**
- * @param {string} file 
- */
-function layout(file) {
-    // set layout file
-    this._layoutFile = file;
-}
+import { ViewEngineExtensions } from './ViewEngineExtensions';
 
 class ViewEngine {
     static express() {
         return function(file, data, callback) {
             data = data || {};
             // add extensions (bind to this view)
-            data.layout = layout.bind(this);
+            data.layout = ViewEngineExtensions.prototype.layout.bind(this);
+            // render file
             return ejs.renderFile(file, data, (err, result) => {
                 if (err) {
                     return callback(err);
