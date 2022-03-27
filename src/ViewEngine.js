@@ -26,7 +26,9 @@ class ViewEngine {
                         value: result
                     });
                     // render layout
-                    ejs.renderFile(layoutFile, data, (err, finalResult) => {
+                    return ejs.renderFile(layoutFile, data, (err, finalResult) => {
+                        // clear body
+                        delete data.body;
                         if (err) {
                             return callback(err);
                         }
